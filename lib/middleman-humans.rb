@@ -1,6 +1,6 @@
 require "middleman-core"
 
-Middleman::Extensions.register :middleman-humans do
-  require "my-extension/extension"
-  MyExtension
+Middleman::Extensions.register(:humans) do
+  require "middleman-humans/extension"
+  Humans::Extension
 end
