@@ -1,0 +1,36 @@
+<% if team.present? %>
+  /* TEAM */
+
+  <% team.each do |person| %>
+    Name: <%= person[:name] %>
+    Site: <%= person[:site] %>
+    Location: <%= person[:location] %>
+
+  <% end %>
+<% end %>
+
+<% if thanks.present? %>
+  /* THANKS */
+
+  <% thanks.each do |name| %>
+    Name: <%= name %>
+
+  <% end %>
+<% end %>
+
+<% if site.present? %>
+  /* SITE */
+
+    <% if site[:last_update].present? %>
+    Last update: <%= site[:last_update] %>
+    <% end %>
+    <% if site[:standards].present? %>
+    Standards: <%= site[:standards] %>
+    <% end %>
+    <% if site[:components].present? %>
+    Components: <%= site[:components] %>
+    <% end %>
+    <% if site[:software].present? %>
+    Software: <%= site[:software] %>
+    <% end %>
+<% end %>
